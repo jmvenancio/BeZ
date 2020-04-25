@@ -323,34 +323,40 @@
         </div>
         <!--<img src="images/croqui.jpg" style="width: 100%; height: 100%;">-->
         <div class="row">
-            <div class="col-md-6 img ftco-animate fadeInUp ftco-animated place" onmouseleave="mouseLeaveHideDiv('igrejaMap') ">
+            <div class="col-md-6 img ftco-animate fadeInUp ftco-animated place"
+                 onmouseleave="mouseLeaveHideDiv('igrejaMap') ">
                 <div class="img"
                      style="background-image: url(images/quinta.jpg);">
-                    <button type="button" class="btn btn-place" onmouseover="overShowDiv('igrejaMap')" onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');"
+                    <button type="button" class="btn btn-place" onmouseover="overShowDiv('igrejaMap')"
+                            onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');"
                     >Ver Mapa
                     </button>
                     <div id="igrejaMap" style="padding: 30px; display: none">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6215.66567585968!2d-9.417632!3d38.836289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1edbb602d417f7%3A0x57dcda7f991a22e6!2sQuinta%20Nossa%20Senhora%20da%20Serra!5e0!3m2!1spt-PT!2spt!4v1587762964547!5m2!1spt-PT!2spt"
-                                width="300" height="200" frameborder="1" style="border:1px; border-radius: 25px;" allowfullscreen=""
+                                width="300" height="200" frameborder="1" style="border:1px; border-radius: 25px;"
+                                allowfullscreen=""
                                 aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
-                <div class="text"> Igreja a Definir </div>
+                <div class="text"> Igreja a Definir</div>
             </div>
-			<div class="col-md-6 img ftco-animate fadeInUp ftco-animated place" onmouseleave="mouseLeaveHideDiv('quintaMap') ">
-				<div class="img"
-					 style="background-image: url(images/quinta.jpg);">
-					<button type="button" class="btn btn-place" onmouseover="overShowDiv('quintaMap')" onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');"
-					>Ver Mapa
-					</button>
-					<div id="quintaMap" style="padding: 30px; display: none">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6215.66567585968!2d-9.417632!3d38.836289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1edbb602d417f7%3A0x57dcda7f991a22e6!2sQuinta%20Nossa%20Senhora%20da%20Serra!5e0!3m2!1spt-PT!2spt!4v1587762964547!5m2!1spt-PT!2spt"
-								width="300" height="200" frameborder="1" style="border:1px; border-radius: 25px;" allowfullscreen=""
-								aria-hidden="false" tabindex="0"></iframe>
-					</div>
-				</div>
-                <div class="text"> Quinta Nossa Senhora da Serra </div>
-			</div>
+            <div class="col-md-6 img ftco-animate fadeInUp ftco-animated place"
+                 onmouseleave="mouseLeaveHideDiv('quintaMap') ">
+                <div class="img"
+                     style="background-image: url(images/quinta.jpg);">
+                    <button type="button" class="btn btn-place" onmouseover="overShowDiv('quintaMap')"
+                            onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');"
+                    >Ver Mapa
+                    </button>
+                    <div id="quintaMap" style="padding: 30px; display: none">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6215.66567585968!2d-9.417632!3d38.836289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1edbb602d417f7%3A0x57dcda7f991a22e6!2sQuinta%20Nossa%20Senhora%20da%20Serra!5e0!3m2!1spt-PT!2spt!4v1587762964547!5m2!1spt-PT!2spt"
+                                width="300" height="200" frameborder="1" style="border:1px; border-radius: 25px;"
+                                allowfullscreen=""
+                                aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+                <div class="text"> Quinta Nossa Senhora da Serra</div>
+            </div>
         </div>
     </div>
 </section>
@@ -434,7 +440,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-7">
-                <form action="#" class="rsvp-form ftco-animate">
+                <form id="rsvp-form" class="rsvp-form ftco-animate" onsubmit="return false;">
                     <div class="">
                         <div class="form-group">
                             <input type="text" id="confirmation-name" class="form-control" placeholder="Nome">
@@ -466,16 +472,35 @@
 							<textarea name="" id="confirmation-notes" cols="30" rows="2" class="form-control"
                                       placeholder="Observações"></textarea>
                         </div>
-                        <div class="form-group">
-                            <input type="submit" value="Eu vou!" class="btn btn-primary py-3 px-4" onclick='function submitConfirmationForm(){
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <input type="submit" value="Eu vou!" class="btn btn-primary py-3 px-4" onclick='function submitConfirmationForm(){
 						let name = document.getElementById("confirmation-name").value;
 						let email = document.getElementById("confirmation-email").value
 						let e = document.getElementById("confirmation-guests");
 						let guests =  e.options[e.selectedIndex].text;
 						let notes = document.getElementById("confirmation-notes").value
-						$.get("https://script.google.com/macros/s/AKfycbwyja7SsiU_qeBDgP8G6oYNqncB7SuSsS9kdA103xPryPdzLYU/exec?email="+email+"&name="+name+"&guests="+guests+"&notes="+notes+"&callback=?");
-						}
+						// $("#loading-image").show();
+                        //     $.ajax({
+                        //     url: uri,
+                        //     cache: false,
+                        //     success: function(html){
+                        //     $(".info").append(html);
+                        //     },
+                        //     complete: function(){
+                        //     $("#loading-image").hide();
+                        //     }
+                        //     });
+						$.get("https://script.google.com/macros/s/AKfycbwyja7SsiU_qeBDgP8G6oYNqncB7SuSsS9kdA103xPryPdzLYU/exec?email="+email+"&name="+name+"&guests="+guests+"&notes="+notes+"&callback=?")
+						.success(function success(){
+						    $("#formStatus").show();
+						    $("#rsvp-form").trigger("reset");
+						})                          }
 		              submitConfirmationForm()'>
+                            </div>
+                            <div class="col-md-8" id="formStatus" style="display: none;">Presença confirmada com
+                                sucesso! Verifique o seu email
+                            </div>
                         </div>
                     </div>
                 </form>
