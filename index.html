@@ -468,10 +468,11 @@
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Eu vou!" class="btn btn-primary py-3 px-4" onclick='function submitConfirmationForm(){
-						var name = document.getElementById("confirmation-name").value;
-						var email = document.getElementById("confirmation-email").value
-						var guests = document.getElementById("confirmation-guests").value
-						var notes = document.getElementById("confirmation-notes").value
+						let name = document.getElementById("confirmation-name").value;
+						let email = document.getElementById("confirmation-email").value
+						let e = document.getElementById("confirmation-guests");
+						let guests =  e.options[e.selectedIndex].text;
+						let notes = document.getElementById("confirmation-notes").value
 						$.get("https://script.google.com/macros/s/AKfycbwyja7SsiU_qeBDgP8G6oYNqncB7SuSsS9kdA103xPryPdzLYU/exec?email="+email+"&name="+name+"&guests="+guests+"&notes="+notes+"&callback=?");
 						}
 		              submitConfirmationForm()'>
