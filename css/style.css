@@ -12689,7 +12689,7 @@ textarea.form-control {
 
 .ftco-footer {
     font-size: 16px;
-    background: white;
+    background: transparent;
     padding: 3em 0;
     z-index: 0;
     position: relative;
@@ -12702,8 +12702,7 @@ textarea.form-control {
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .7;
-    background: #fff;
+    background: transparent;
 }
 
 .ftco-footer .ftco-footer-logo {
