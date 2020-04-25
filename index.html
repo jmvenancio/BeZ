@@ -325,29 +325,31 @@
         <div class="row">
             <div class="col-md-6 img ftco-animate fadeInUp ftco-animated place" onmouseleave="mouseLeaveHideDiv('igrejaMap') ">
                 <div class="img"
-                     style="background-image: url(images/quinta.jpg); width: 100%; background-position: left center; height: 350px;">
-                    <button type="button" class="btn btn-place" onmouseover="overShowDiv('igrejaMap')" onclick="window.location='https://goo.gl/maps/TFs8PekM35RMwWF59'"
+                     style="background-image: url(images/quinta.jpg);">
+                    <button type="button" class="btn btn-place" onmouseover="overShowDiv('igrejaMap')" onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');"
                     >Ver Mapa
                     </button>
                     <div id="igrejaMap" style="padding: 30px; display: none">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6215.66567585968!2d-9.417632!3d38.836289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1edbb602d417f7%3A0x57dcda7f991a22e6!2sQuinta%20Nossa%20Senhora%20da%20Serra!5e0!3m2!1spt-PT!2spt!4v1587762964547!5m2!1spt-PT!2spt"
-                                width="300" height="200" frameborder="1" style="border:1px;" allowfullscreen=""
+                                width="300" height="200" frameborder="1" style="border:1px; border-radius: 25px;" allowfullscreen=""
                                 aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
+                <div class="text"> Igreja a Definir </div>
             </div>
 			<div class="col-md-6 img ftco-animate fadeInUp ftco-animated place" onmouseleave="mouseLeaveHideDiv('quintaMap') ">
 				<div class="img"
-					 style="background-image: url(images/quinta.jpg); width: 100%; background-position: left center; height: 350px;">
-					<button type="button" class="btn btn-place" onmouseover="overShowDiv('quintaMap')" onclick="window.location='https://goo.gl/maps/TFs8PekM35RMwWF59'"
+					 style="background-image: url(images/quinta.jpg);">
+					<button type="button" class="btn btn-place" onmouseover="overShowDiv('quintaMap')" onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');"
 					>Ver Mapa
 					</button>
 					<div id="quintaMap" style="padding: 30px; display: none">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6215.66567585968!2d-9.417632!3d38.836289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1edbb602d417f7%3A0x57dcda7f991a22e6!2sQuinta%20Nossa%20Senhora%20da%20Serra!5e0!3m2!1spt-PT!2spt!4v1587762964547!5m2!1spt-PT!2spt"
-								width="300" height="200" frameborder="1" style="border:1px;" allowfullscreen=""
+								width="300" height="200" frameborder="1" style="border:1px; border-radius: 25px;" allowfullscreen=""
 								aria-hidden="false" tabindex="0"></iframe>
 					</div>
 				</div>
+                <div class="text"> Quinta Nossa Senhora da Serra </div>
 			</div>
         </div>
     </div>
@@ -470,7 +472,7 @@
 						var email = document.getElementById("confirmation-email").value
 						var guests = document.getElementById("confirmation-guests").value
 						var notes = document.getElementById("confirmation-notes").value
-						$.get("https://script.google.com/macros/s/AKfycbwyja7SsiU_qeBDgP8G6oYNqncB7SuSsS9kdA103xPryPdzLYU/exec?email="+email+"&name="+name+"&guests="+guests+"&notes="+notes);
+						$.get("https://script.google.com/macros/s/AKfycbwyja7SsiU_qeBDgP8G6oYNqncB7SuSsS9kdA103xPryPdzLYU/exec?email="+email+"&name="+name+"&guests="+guests+"&notes="+notes+"&callback=?");
 						}
 		              submitConfirmationForm()'>
                         </div>

@@ -12430,8 +12430,15 @@ textarea.form-control {
 }
 
 .place .text {
-    padding: 30px;
-    background: #fff;
+    background: #f1f2f3;
+    border-radius: 25px;
+    color: #013970;
+    height: 105px;
+    position: relative;
+    margin-top: -50px;
+    z-index: -1;
+    display: flow-root;
+    padding: 60px 15px 15px;
 }
 
 .place .text .icon {
@@ -12446,6 +12453,13 @@ textarea.form-control {
     letter-spacing: 1px;
     border: 1px solid #fddddc;
     padding: 8px 10px;
+}
+
+.place .img{
+    width: 100%;
+    background-position: left center;
+    height: 350px;
+    border-radius: 25px;
 }
 
 .rsvp-form {
