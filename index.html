@@ -331,6 +331,9 @@
                             onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');"
                     >Ver Mapa
                     </button>
+                    <div class="title-place" onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');">
+                        Igreja a definir
+                    </div>
                     <div id="igrejaMap" style="padding: 30px; display: none">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6215.66567585968!2d-9.417632!3d38.836289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1edbb602d417f7%3A0x57dcda7f991a22e6!2sQuinta%20Nossa%20Senhora%20da%20Serra!5e0!3m2!1spt-PT!2spt!4v1587762964547!5m2!1spt-PT!2spt"
                                 width="300" height="200" frameborder="1" style="border:1px; border-radius: 25px;"
@@ -338,7 +341,6 @@
                                 aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
-                <div class="text"> Igreja a Definir</div>
             </div>
             <div class="col-md-6 img ftco-animate fadeInUp ftco-animated place"
                  onmouseleave="mouseLeaveHideDiv('quintaMap') ">
@@ -348,6 +350,9 @@
                             onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');"
                     >Ver Mapa
                     </button>
+                    <div class="title-place" onclick="window.open('https://goo.gl/maps/TFs8PekM35RMwWF59', '_blank');">
+                        Quinta Nossa Senhora da Serra
+                    </div>
                     <div id="quintaMap" style="padding: 30px; display: none">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6215.66567585968!2d-9.417632!3d38.836289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1edbb602d417f7%3A0x57dcda7f991a22e6!2sQuinta%20Nossa%20Senhora%20da%20Serra!5e0!3m2!1spt-PT!2spt!4v1587762964547!5m2!1spt-PT!2spt"
                                 width="300" height="200" frameborder="1" style="border:1px; border-radius: 25px;"
@@ -355,7 +360,6 @@
                                 aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
-                <div class="text"> Quinta Nossa Senhora da Serra</div>
             </div>
         </div>
     </div>
@@ -491,15 +495,25 @@
                         //     $("#loading-image").hide();
                         //     }
                         //     });
+                        $("#formLoading").show();
 						$.get("https://script.google.com/macros/s/AKfycbwyja7SsiU_qeBDgP8G6oYNqncB7SuSsS9kdA103xPryPdzLYU/exec?email="+email+"&name="+name+"&guests="+guests+"&notes="+notes+"&callback=?")
 						.success(function success(){
+						    $("#formLoading").hide();
+						    $("#formStatus").text("Presença confirmada com sucesso! Verifique o seu email");
 						    $("#formStatus").show();
 						    $("#rsvp-form").trigger("reset");
-						})                          }
+						})
+                        .error( function error(){
+                            $("#formLoading").hide();
+                            $("#formStatus").text("Algo correu mal. Por favor envie um email para jose.perdigao.venancio@gmail.com");
+                            $("#formStatus").show();
+                        })        }
 		              submitConfirmationForm()'>
                             </div>
-                            <div class="col-md-8" id="formStatus" style="display: none;">Presença confirmada com
-                                sucesso! Verifique o seu email
+                            <div class="col-md-8">
+                                <img id="formLoading" style="height: 20px; display: none; position: relative"
+                                     src="images/blue-loader.gif">
+                                <div class="text" id="formStatus" style="display: none; font-size: small"></div>
                             </div>
                         </div>
                     </div>

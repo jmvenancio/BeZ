@@ -2805,6 +2805,23 @@ fieldset:disabled a.btn {
     border-color: #a9c3f6;
 }
 
+.title-place {
+    color: #fff;
+    background-color: transparent;
+    position: relative;
+    top: 20px;
+    left: -20px;
+    width: 45%;
+    font-size: medium;
+    float: right;
+    text-align: right;
+    cursor: pointer;
+}
+
+.title-place:hover {
+    font-weight: bold;
+}
+
 .btn-primary:focus, .btn-primary.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
