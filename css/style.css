@@ -11918,10 +11918,11 @@ h5,
 #timer .time {
     width: 25%;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 999;
     border-left: 1px solid rgba(0, 0, 0, 0.05);
     color: #fff;
     margin-bottom: 0;
+    font-family: "Calligraffitti", cursive;
 }
 
 @media (max-width: 991.98px) {
@@ -11935,11 +11936,10 @@ h5,
 }
 
 #timer .time span {
-    font-size: 12px;
+    font-size: 16px;
     display: block;
     color: #fff;
     letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 .bg-light {

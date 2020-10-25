@@ -303,7 +303,7 @@
 
 	function makeTimer() {
 
-		var endTime = new Date("25 September 2020 15:00:00 GMT+00:00");
+		var endTime = new Date("27 March 2021 12:30:00 GMT+00:00");
 		endTime = (Date.parse(endTime) / 1000);
 
 		var now = new Date();
@@ -320,10 +320,10 @@
 		if (minutes < "10") { minutes = "0" + minutes; }
 		if (seconds < "10") { seconds = "0" + seconds; }
 
-		$("#days").html(days + "<span>Days</span>");
-		$("#hours").html(hours + "<span>Hours</span>");
-		$("#minutes").html(minutes + "<span>Minutes</span>");
-		$("#seconds").html(seconds + "<span>Seconds</span>");		
+		$("#days").html(days + "<span>Dias</span>");
+		$("#hours").html(hours + "<span>Horas</span>");
+		$("#minutes").html(minutes + "<span>Minutos</span>");
+		$("#seconds").html(seconds + "<span>Segundos</span>");
 
 }
 
