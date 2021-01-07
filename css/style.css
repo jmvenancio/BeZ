@@ -12334,7 +12334,7 @@ textarea.form-control {
     bottom: 0;
     content: '';
     border: 1px solid rgba(0, 0, 0, 0.15);
-    z-index: -1;
+    z-index: -9;
     -webkit-transform: rotate(-1deg);
     -ms-transform: rotate(-1deg);
     transform: rotate(-1deg);
@@ -12348,7 +12348,7 @@ textarea.form-control {
     bottom: 0;
     content: '';
     border: 1px solid rgba(0, 0, 0, 0.15);
-    z-index: -1;
+    z-index: -10;
     -webkit-transform: rotate(1deg);
     -ms-transform: rotate(1deg);
     transform: rotate(1deg);
