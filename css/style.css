@@ -11904,6 +11904,13 @@ h5,
     color: #fff;
 }
 
+.video-hero .text h3 {
+    font-family: "Calligraffitti", cursive;
+    font-size: 2vw;
+    color: #fff;
+}
+
+
 #timer {
     width: 60%;
     margin: 0 auto;
